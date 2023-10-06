@@ -9,7 +9,7 @@ import cardImgSix from './victoria-shes-Wmeyp16whLI-unsplash.jpg';
 function createMainPage(){
   var main = document.querySelector('main');
   var food = document.createElement('div');
-  food.classList.add('.food');
+  food.classList.add('food');
 
   food.append(...createCard(cardImgOne,cardImgTwo,cardImgThree,cardImgFour,cardImgFive,cardImgSix));
 
@@ -26,8 +26,13 @@ function createCard(...images){
     img.alt = 'A picture of a food';
     img.width = 150;
     img.height = 150;
-  
+    
+    var p = document.createElement('p');
+    p.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, sapiente.';
+
+    
     card.appendChild(img);
+    card.appendChild(p);
     cards.push(card);
   }
 

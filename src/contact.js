@@ -20,17 +20,21 @@ function createContactPage(){
 
 function createInput(element,type,name){
   var label = document.createElement('label');
+  var div = document.createElement('div');
+
   label.textContent = name;
   label.setAttribute('for', name);
+  div.appendChild(label);
+
   var input = document.createElement(element);
   if(element !== 'textarea')
     input.setAttribute('type',type);
   input.setAttribute('id',name);
   input.setAttribute('name',name);
   input.setAttribute('required',true);
-  label.appendChild(input);
+  div.appendChild(input);
 
-  return label;
+  return div;
 }
 
 function createButton(){

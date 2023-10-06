@@ -12,7 +12,7 @@ function createHeader() {
   imageLogo.width = '100';
   imageLogo.height = '100';
   imageLogo.src = restaurantImage;
-  logo.append(h1, imageLogo);
+  logo.append(imageLogo, h1);
   
   var nav = document.createElement('nav');
   var ul = document.createElement('ul');
